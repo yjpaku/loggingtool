@@ -21,8 +21,9 @@ public class Websocket implements Listener {
 	public void display() {
 		System.out.println("websocket: " + message.toString());
 		try {
-			WebsocketClient.getSession().getBasicRemote().sendObject(message);
-		} catch (IOException | EncodeException e) {
+			MessageJsonEncoder messageJsonEncoder = new MessageJsonEncoder();
+			WebsocketClient.getSession().getBasicRemote().sendText(messageJsonEncoder.encode(message));
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

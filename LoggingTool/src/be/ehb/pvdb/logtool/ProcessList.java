@@ -82,7 +82,7 @@ public class ProcessList implements Runnable{
 	}
 	
 	private void sendProcess(ProcessInfo processInfo,int crud) {
-		String content = processInfo.getPid() + "|" + processInfo.getName() + "|" + processInfo.getTime() + "|" + processInfo.getUser() + "|" + processInfo.getStartTime();	
+		String content = processInfo.getPid() + ";" + processInfo.getName() + ";" + processInfo.getTime() + ";" + processInfo.getUser() + ";" + processInfo.getStartTime();	
 		messageData.createMsg(new Message("process", content));
 	}
 }

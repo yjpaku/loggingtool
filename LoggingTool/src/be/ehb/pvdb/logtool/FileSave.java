@@ -54,14 +54,4 @@ public class FileSave implements Listener {
 		String encryptedValue = Base64.encodeBase64String(encVal);
 		return encryptedValue;
 	}
-
-//	public static String decrypt(String encryptedData) throws Exception {
-//		Key key = new SecretKeySpec(new byte[] { 'E', 'H', 'B', ' ', 'H', 'e', 't', ' ', 'V', 'e', 'r','h', 'a', 'a', 'l','!'}, "AES");
-//		Cipher c = Cipher.getInstance("AES");
-//		c.init(Cipher.DECRYPT_MODE, key);
-//		byte[] decordedValue = Base64.decodeBase64(encryptedData);
-//		byte[] decValue = c.doFinal(decordedValue);
-//		String decryptedValue = new String(decValue);
-//		return decryptedValue;
-//	}
 }
